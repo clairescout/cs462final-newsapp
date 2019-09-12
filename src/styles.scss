@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+//@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+$red: #ed6a57;
+$green: #5bc1a7;
+$blue: #00bad6;
+$blue-300: #00dafc;
+$yellow: #fdc64d;
+$info-blue: #5ac9f5;
+$disabled: #dddddd;
+$dark-gray: #676a6c;
+$primary: #ed6a57;//#76948C;//#32746D;
+$shade: #004D40;
+$grey:  #F5F5F5;//#E3E4DB;
+$accent: #FFCA28;
+$light: #B2DFDB;
+
+$theme-colors: (
+  "primary": $primary,
+  "success": $green,
+  "warning": $yellow,
+  "danger": $red,
+  "secondary": $grey,
+  "info": $blue,
+  "shade": $shade,
+  "light": $light,
+);
+
+@import "~bootstrap/scss/bootstrap";
+
+body {
+    background-color: $grey;
+  }

@@ -1,0 +1,36 @@
+
+<mat-card *ngIf="!referred" class="subscribe-card mt-5">
+  <mat-card-header>
+      <mat-card-title>Like Daily News? Refer a Friend!</mat-card-title>
+      <mat-card-subtitle>Daily News provides the top headlines from varried news sources. Invite a friend to subscribe to the daily news update</mat-card-subtitle>
+  </mat-card-header>
+  <mat-form-field style="width: 95%" appearance="outline">
+    <mat-label>Friend's Name</mat-label>
+    <input matInput [(ngModel)]="friendInfo.name" placeholder="Friend's Name">
+    <mat-icon matSuffix>person</mat-icon>
+  </mat-form-field>
+  <br/>
+  <mat-form-field style="width: 95%" appearance="outline">
+    <mat-label>Friend's Email</mat-label>
+    <input matInput [(ngModel)]="friendInfo.email" placeholder="Friend's Email">
+    <mat-icon matSuffix>email</mat-icon>
+  </mat-form-field>
+  <br/>
+  <mat-form-field style="width: 95%" appearance="outline">
+    <mat-label>Friend's Cell phone Number</mat-label>
+    <input matInput [(ngModel)]="friendInfo.phone" placeholder="Friend's Phone Number">
+    <mat-icon matSuffix>phone</mat-icon>
+  </mat-form-field>
+  <br/>
+  <mat-card-actions>
+    <button class="text-white" [disabled]="friendInfo.name === '' || friendInfo.email === '' || friendInfo.phone === ''" color="primary" style="margin-left: 10px;" (click)="referFriend()" mat-raised-button color="primary">Refer Friend</button>
+  </mat-card-actions>
+</mat-card>
+
+<mat-card *ngIf="referred" class="subscribe-card mt-5">
+  <div class="m-4">
+      <h2 style="text-align: center">Congrats!</h2>
+      <h5 style="text-align: center">You've referred a friend to Daily News!</h5>
+  </div>
+</mat-card>
+

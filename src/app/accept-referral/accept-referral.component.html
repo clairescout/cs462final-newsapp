@@ -1,0 +1,26 @@
+<mat-card *ngIf="!subscribed && !rejected" class="accept-referral-card mt-5">
+  <mat-card-header>
+      <mat-card-title>Hi there!</mat-card-title>
+      <mat-card-subtitle>Your friend thought you might like Daily News. Daily News provides the top headlines from varried news sources. Click below to scribe to daily news updates.</mat-card-subtitle>
+  </mat-card-header>
+
+  <div class="accept">
+    <button class="bg-danger accept-button text-white pl-5 pr-5 pt-3 pb-3 m-3" (click)="acceptReferral()" mat-raised-button color="primary">Subscribe</button>
+    <button class="bg-danger accept-button text-white pl-5 pr-5 pt-3 pb-3 m-3" (click)="rejectReferral()" mat-raised-button color="primary">No Thanks</button>
+  </div>
+  
+</mat-card>
+
+<mat-card *ngIf="subscribed" class="accept-referral-card mt-5">
+  <div class="m-4">
+      <h2 style="text-align: center">Congrats!</h2>
+      <h5 style="text-align: center">You've subscribed to Daily News!</h5>
+  </div>
+</mat-card>
+
+<mat-card *ngIf="rejected" class="accept-referral-card mt-5">
+  <div class="m-4">
+      <h2 style="text-align: center">No Problem</h2>
+      <h5 style="text-align: center">Feel free to come back and subscribe any time</h5>
+  </div>
+</mat-card>

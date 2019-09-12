@@ -1,0 +1,36 @@
+
+<mat-card *ngIf="!subscribed" class="subscribe-card mt-5">
+  <mat-card-header>
+      <mat-card-title>Subscribe to Daily News Updates</mat-card-title>
+      <mat-card-subtitle>Daily News provides the top headlines from varried news sources. Subscribe to receive a text message notifying you of the latest daily news</mat-card-subtitle>
+  </mat-card-header>
+  <mat-form-field style="width: 95%" appearance="outline">
+    <mat-label>Name</mat-label>
+    <input matInput [(ngModel)]="subscriberInfo.name" placeholder="Name">
+    <mat-icon matSuffix>person</mat-icon>
+  </mat-form-field>
+  <br/>
+  <mat-form-field style="width: 95%" appearance="outline">
+    <mat-label>Email</mat-label>
+    <input matInput [(ngModel)]="subscriberInfo.email" placeholder="Email">
+    <mat-icon matSuffix>email</mat-icon>
+  </mat-form-field>
+  <br/>
+  <mat-form-field style="width: 95%" appearance="outline">
+    <mat-label>Cell phone Number</mat-label>
+    <input matInput [(ngModel)]="subscriberInfo.phone" placeholder="Phone Number">
+    <mat-icon matSuffix>phone</mat-icon>
+  </mat-form-field>
+  <br/>
+  <mat-card-actions>
+    <button mat-raised-button class="text-white" color = "primary" [disabled]="subscriberInfo.name === '' || subscriberInfo.email === '' || subscriberInfo.phone === ''" style="margin-left: 10px;" (click)="subscribe()"  color="primary">Subscribe</button>
+  </mat-card-actions>
+</mat-card>
+
+
+<mat-card *ngIf="subscribed" class="subscribe-card mt-5">
+  <div class="m-4">
+      <h2 style="text-align: center">Congrats!</h2>
+      <h5 style="text-align: center">You've subscribed to Daily News!</h5>
+  </div>
+</mat-card>

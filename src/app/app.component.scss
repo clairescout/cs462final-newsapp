@@ -1,0 +1,36 @@
+
+@import "../../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+.navbar {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+   // width: 300px;
+}
+
+.navbar-item {
+    display: inline-block;
+    text-align: center;
+}
+
+.navbar-item:hover {
+    cursor: pointer;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 45px;;
+    text-align: left;
+  }
+  
+  .footer-text {
+    padding-left: 8px;
+    padding-top: 8px;
+  }
